@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<script>
+		function check() {
+			var age = document.getElementById("age").value;
+			var gender = document.getElementById("male").checked;
+			var weight = document.getElementById("weight").value;
+			
+			if(!(16<=parseInt(age) && parseInt(age)<=69)){
+				document.getElementById("result").value = "age problem!";
+			} else{
+				if((gender && weight<50) || (!gender && weight<45)) {
+					document.getElementById("result").value = "weight problem!";
+				} else {
+					document.getElementById("result").innerHTML = "you can 헌혈";
+					console.log("asdf");
+				}
+			}
+		}
+	</script>
+	
+	<h1>헌혈 조건</h1><br>
+	나이 <input type="text" id="age" > <br>
+	성별 남자<input type="radio" name="gender" id="male" checked> 여자<input type="radio" name="gender" id="female"><br>
+	몸무게 <input type="text" id="weight"><br>
+	
+	<button onclick="check();">헌혈 조건 체크</button><br>
+	<p id="result"></p>
+	
+</body>
+</html>
