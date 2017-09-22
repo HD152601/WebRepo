@@ -100,13 +100,13 @@
            console.log(id,pw);   
            
            // 서버로  post 전속(ajax)
-         $.post("http://httpbin.org/post",
+         $.post("/WebClass/login",
                {"id":id, "pw":pw},
                function(data){
                   //alert(data.form.id + '님 로그인 되었씁니다.');
                   var myModal = $('myModal');
                   myModal.modal();
-                  mymodal.find('.modal-body').text(data.form.id + '님 로그인 되었습니다.');
+                  myModal.find('.modal-body').text(data.id + '님 로그인 되었습니다.');
                });
                
         });

@@ -1,0 +1,16 @@
+     div.container{
+     text-shadow: -1px 0 #F2F1F6, 0 1px #F2F1F6, 1px 0 #F2F1F6, 0 -1px #F2F1F6;
+ -moz-text-shadow: -1px 0 #F2F1F6, 0 1px #F2F1F6, 1px 0 #F2F1F6, 0 -1px #F2F1F6;
+ -webkit-text-shadow: -1px 0 #F2F1F6, 0 1px #F2F1F6, 1px 0 #F2F1F6, 0 -1px #F2F1F6;
+     padding-top:30px;
+     padding-bottom: 20px;
+     }
+     div.cont{
+     padding-top:30px;
+     }
+ body {
+    margin: 0px;
+    padding: 0px;
+    background :url(back.jpg) repeat-x #cccccc;
+     background-size:cover;
+   }
