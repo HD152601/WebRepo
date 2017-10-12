@@ -44,7 +44,7 @@
     	if(user == null) {
      %>
     <form class="form-inline my-2 my-lg-0" id="loginForm" action="/WebClass/bloglogin" method="post">
-      <input class="form-control mr-sm-2" type="text" placeholder="ID" aria-label="ID" id="id" name="id" required>
+      <input class="form-control mr-sm-2" type="text" <% if(request.getParameter("id") == null) { %> value = ""<% } else { %> value = <%= request.getParameter("id")%> <% } %> placeholder="ID" aria-label="ID" id="id" name="id" required>
       <input class="form-control mr-sm-2" type="password" placeholder="PW" aria-label="PW" id="pw" name="pwd" required>
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
     </form>
