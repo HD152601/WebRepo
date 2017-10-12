@@ -12,11 +12,11 @@
 <body>
 <div class="container">
 
-  <form class="form-signin" action="/WebClass/login" method="post">
+  <form class="form-signin" action="/WebClass/bloglogin" method="post">
     <h2 class="form-signin-heading">Please sign in</h2>
     
     <label for="inputEmail" class="sr-only">Email address</label>
-    <input type="email" name="id" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+    <input type="email" name="id" id="inputEmail" class="form-control" <% if(request.getParameter("id") == null) { %> value = ""<% } else { %> value = <%= request.getParameter("id")%> <% } %> placeholder="Email address" required autofocus>
     
     <label for="inputPassword" class="sr-only">Password</label>
     <input type="password" name="pwd" id="inputPassword" class="form-control" placeholder="Password" required>
